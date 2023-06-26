@@ -1,0 +1,9 @@
+.additionalInfo {
+  display: flex;
+  gap: 16px;
+}
+
+.additionalInfo > a,
+.additionalInfo > p {
+  font-size: 0.9rem;
+}

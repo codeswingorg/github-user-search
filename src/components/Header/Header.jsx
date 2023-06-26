@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import styles from "./Header.module.css";
-import { SearchResultsContext } from "../../context/searchResultsContext";
+import { UserProfileContext } from "../../context/UserProfileContext";
 
 export default function Header() {
-  const { setSearchQuery, searchQuery } = useContext(SearchResultsContext);
+  const { setSearchQuery } = useContext(UserProfileContext);
 
   const onSubmit = (e) => {
     e.preventDefault();

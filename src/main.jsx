@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import { SearchResultsProvider } from "./context/searchResultsContext.jsx";
+import { UserProfileProvider } from "./context/UserProfileContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <SearchResultsProvider>
+    <UserProfileProvider>
       <App />
-    </SearchResultsProvider>
+    </UserProfileProvider>
   </React.StrictMode>
 );

@@ -1,0 +1,18 @@
+.profileStats {
+  display: flex;
+  gap: 16px;
+}
+
+.profileStats > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profileStats span {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.profileStats p {
+  font-size: 0.85rem;
+}

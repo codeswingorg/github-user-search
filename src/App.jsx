@@ -1,12 +1,12 @@
 import Header from "./components/Header/Header";
-import SearchResults from "./components/SearchResults/SearchResults";
+import UserProfile from "./components/UserProfile/UserProfile";
 
 function App() {
   return (
     <>
       <Header />
       <div className="container">
-        <SearchResults />
+        <UserProfile />
       </div>
     </>
   );
