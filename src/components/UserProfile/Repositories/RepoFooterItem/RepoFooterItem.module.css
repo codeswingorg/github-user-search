@@ -1,0 +1,10 @@
+.footerItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.footerItem svg {
+  width: 16px;
+  height: 16px;
+}

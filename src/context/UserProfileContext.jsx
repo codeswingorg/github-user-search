@@ -4,7 +4,6 @@ const UserProfileContext = createContext(null);
 
 const UserProfileProvider = ({ children }) => {
   const [profile, setProfile] = useState([]);
-  const [follwers, setFollowers] = useState([]);
   const [repos, setRepos] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -16,11 +15,9 @@ const UserProfileProvider = ({ children }) => {
       const profileResults = await profileResponse.json();
       setProfile(profileResults);
 
-      const followersResponse = await fetch(profileResults.followers_url);
-      const followersResults = await followersResponse.json();
-      setFollowers(followersResults);
-
-      const reposResponse = await fetch(profileResults.repos_url);
+      const reposResponse = await fetch(
+        `${profileResults.repos_url}?sort=pushed_at&per_page=5`
+      );
       const reposResults = await reposResponse.json();
       setRepos(reposResults);
     };
@@ -35,7 +32,6 @@ const UserProfileProvider = ({ children }) => {
 
   const value = {
     profile,
-    follwers,
     repos,
     searchQuery,
     setSearchQuery,

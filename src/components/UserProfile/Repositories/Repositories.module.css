@@ -1,0 +1,18 @@
+.heading {
+  font-size: 1.1rem;
+  margin: 12px 0;
+}
+
+.repo {
+  margin: 12px 0;
+}
+
+.repoDetails {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lastPush {
+  margin-left: auto;
+}

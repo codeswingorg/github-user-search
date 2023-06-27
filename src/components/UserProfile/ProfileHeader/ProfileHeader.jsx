@@ -4,6 +4,7 @@ import ProfileLink from "./ProfileLink/ProfileLink";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import AdditionalInfo from "./AdditionalInfo/AdditionalInfo";
 import ProfileStats from "./ProfileStats/ProfileStats";
+import { formatDate } from "../../../util/formatDate";
 
 export default function ProfileHeader({ profile }) {
   const {
@@ -18,10 +19,6 @@ export default function ProfileHeader({ profile }) {
     created_at,
   } = profile;
 
-  function formatDate(dateString) {
-    const date = new Date(dateString);
-    return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
-  }
   const accountCreatedOn = formatDate(created_at);
 
   return (
